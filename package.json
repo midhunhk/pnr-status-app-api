@@ -1,29 +1,48 @@
 {
   "name": "pnrstatus",
-  "version": "0.3.1",
-  "description": "A web API for pnr status app",
-  "main": "index.js",
+  "version": "1.0.1",
+  "description": "Modernized Web API for PNR Status App",
+  "type": "module",
+  "main": "dist/index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
-    "prod": "node dist/api.bundle.js"
+    "dev": "tsx watch src/index.ts",
+    "build": "vite build",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
   },
-  "keywords": [],
+  "keywords": [
+    "pnr",
+    "express",
+    "typescript",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "dependencies": {
     "axios": "^1.18.0",
-    "cheerio": "^1.0.0-rc.10",
+    "cheerio": "^1.0.0",
     "cookie-parser": "^1.4.7",
-    "express": "^4.22.2",
-    "webpack": "^5.105.0"
+    "cors": "^2.8.5",
+    "express": "^5.0.1",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.0.0",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20",
-    "webpack-cli": "^4.9.2"
-  },
-  "engines": {
-    "node": "10.x"
+    "@types/cookie-parser": "^1.4.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.13.1",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vite": "^6.2.0",
+    "vitest": "^3.0.7"
   }
 }
