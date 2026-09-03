@@ -1,0 +1,42 @@
+{
+  "version": "1.0",
+  "name": "service configuration",
+  "services": [
+    {
+      "id": "0",
+      "name": "search-service",
+      "description": "a test service",
+      "service": "search.service.ts",
+      "enabled": true,
+      "stub": false,
+      "stub_file": ""
+    },
+    {
+      "id": "1",
+      "name": "trainpnrstatus",
+      "description": "train pnr status",
+      "service": "trainpnrstatus.service.ts",
+      "enabled": false,
+      "stub": false,
+      "stub_file": "stubs/trainpnrstatus_response.html"
+    },
+    {
+      "id": "2",
+      "name": "rail-yatri",
+      "description": "a test service",
+      "service": "railyatri.service.ts",
+      "enabled": true,
+      "stub": true,
+      "stub_file": "stubs/railyatri_response.html"
+    },
+    {
+      "id": "3",
+      "name": "erails",
+      "description": "erails through tripmgt.com",
+      "service": "erails.service.ts",
+      "enabled": true,
+      "stub": false,
+      "stub_file": "stubs/erails_response.json"
+    }
+  ]
+}
